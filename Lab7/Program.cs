@@ -14,7 +14,8 @@ namespace Lab7
         static void GetValidName()
         {
 
-            Regex isName = new Regex(@"^[A-Z]{1}[a-z]{29}$");
+            Console.WriteLine("Please enter a name: ");
+            Regex isName = new Regex(@"^[A-Z]{1}[a-z]{1,29}$");
             string name = Console.ReadLine();
 
             if (isName.IsMatch(name))
@@ -36,6 +37,7 @@ namespace Lab7
         static void GetValidEmail()
         {
 
+            Console.WriteLine("Please enter an e-mail: ");
             Regex isAddress = new Regex(@"^\w{5,}@[A-z]{5,}.[A-z]{2,3}$");
             string address = Console.ReadLine();
 
@@ -58,6 +60,7 @@ namespace Lab7
         static void GetValidPhone()
         {
 
+            Console.WriteLine("Please enter a phone number: ");
             Regex isPhone = new Regex(@"^\d{3}-\d{3}-\d{4}$");
             string phone = Console.ReadLine();
 
@@ -80,6 +83,7 @@ namespace Lab7
         static void GetValidDate()
         {
 
+            Console.WriteLine("Please enter a date: ");
             Regex isDate = new Regex(@"^[0123][0-9]/[01][0-9]/\d{4}$");
             string date = Console.ReadLine();
 
